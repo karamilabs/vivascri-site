@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./fonts.css">
+<title>Privacy — Vivascri</title>
+<meta name="description" content="Vivascri's privacy policy. The app is local and offline; your work never leaves your computer.">
+<style>
+  :root{
+    --ink:#26221E;--ink-2:#3A342D;--muted:#6E655A;--faint:#A99F8E;--cream:#F6EFE1;
+    --page:#EBDFCB;--line:rgba(38,34,30,.14);--accent:#3E7A4C;--accent-deep:#2F5E3A;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--page);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;line-height:1.6}
+  .wrap{max-width:760px;margin:0 auto;padding:64px 40px 96px}
+  a{color:var(--accent-deep)}
+  .brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink);margin-bottom:40px}
+  .brand svg{width:26px;height:26px}
+  .brand span{font-family:'Newsreader',serif;font-weight:500;font-size:22px}
+  h1{font-family:'Newsreader',serif;font-weight:500;font-size:40px;letter-spacing:-.015em;margin:0 0 6px}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+  h2{font-family:'Newsreader',serif;font-weight:500;font-size:22px;margin:34px 0 8px}
+  p,li{font-size:16px;color:var(--ink-2)}
+  .lead{font-size:18px}
+  .meta{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--faint);margin-top:48px;border-top:1px solid var(--line);padding-top:16px}
+  .note{background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:14px;color:var(--muted);margin-top:24px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="brand" href="./index.html">
+    <svg viewBox="0 0 96 96"><path fill="#3E7A4C" d="M48 7C61 19 71 33 71 51C63 56 56 58 48 58C40 58 33 56 25 51C25 33 35 19 48 7Z"/><path fill="#26221E" d="M71 51C71 67 61 80 48 89C35 80 25 67 25 51C33 56 40 58 48 58C56 58 63 56 71 51Z"/></svg>
+    <span>Vivascri</span>
+  </a>
+
+  <div class="eyebrow">Privacy</div>
+  <h1>Your work stays on your computer.</h1>
+  <p class="lead">Vivascri is a local, offline writing app. It runs on your machine, and your documents
+  and your PDF library never leave it. This page explains, plainly, what that means and the few places
+  anything is collected at all.</p>
+
+  <h2>The app</h2>
+  <ul>
+    <li><strong>No account.</strong> The free app needs no sign-up and no login.</li>
+    <li><strong>Nothing is uploaded.</strong> Your drafts, your PDFs, the AI drafting, and the grounded
+      citations all run on your machine. There is no server that sees your writing.</li>
+    <li><strong>No telemetry.</strong> The app does not phone home, track usage, or send analytics.</li>
+    <li><strong>Optional web fetch, only when you ask.</strong> If you paste a DOI, arXiv link, or URL to
+      add a paper, the app requests that one open-access source (and, for citation lookups you initiate,
+      the public metadata for it). Nothing about your document is sent — only the identifier you typed.</li>
+    <li><strong>Optional cloud tiers (coming soon).</strong> Paid features like hosted inference, sync,
+      and collaboration are online services and would need an account and a connection. They are opt-in,
+      clearly labelled, and off unless you choose them. The free app never uses them.</li>
+  </ul>
+
+  <h2>This website</h2>
+  <ul>
+    <li><strong>Privacy-respecting analytics, or none.</strong> If this site uses analytics at all, it is
+      a cookieless, no-personal-data measure of page views. No Google Analytics, no ad trackers.</li>
+    <li><strong>Fonts are self-hosted.</strong> The site serves its own fonts, so visiting it does not
+      send your IP to a third-party font CDN.</li>
+    <li><strong>Email, only if you give it.</strong> If you enter your email to be notified about
+      macOS/Linux or updates, it is used only to send those updates. Nothing else.</li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p>Questions about privacy? Email <a href="mailto:deviman26@gmail.com">deviman26@gmail.com</a>.</p>
+
+  <div class="note">Draft policy — review and adjust the analytics/email specifics to match exactly what
+  you switch on at launch before publishing.</div>
+
+  <div class="meta">Vivascri · vivascri.com · Windows only, for now.</div>
+</div>
+</body>
+</html>
