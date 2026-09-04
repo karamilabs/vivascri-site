@@ -1,7 +1,9 @@
-<html><head>
-<meta name="robots" content="noindex, nofollow">
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./fonts.css">
-<title>Vivascri — grounded, private academic writing</title>
+<title>Vivascri: grounded, private academic writing</title>
 <meta name="description" content="A local, offline AI writing app for academics. Every citation is pinned to an exact page in your own PDFs. Free, no account. Windows."><style>
     .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
       border:1px solid color-mix(in srgb,currentColor 50%,transparent);
@@ -33,7 +35,7 @@
     .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
       padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
       border-radius:4px;white-space:pre-wrap;pointer-events:none}
-    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts; keep both
        in sync until dc-runtime regains a build step. */
     @media print {
       @page { margin: 0.5cm; }
@@ -57,6 +59,19 @@
   html { scroll-behavior: smooth; }
   @keyframes riseIn { from { transform: translateY(14px); } to { transform: translateY(0); } }
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; scroll-behavior: auto; } }
+  /* Mobile responsiveness; overrides inline desktop styles via attribute selectors */
+  @media (max-width: 860px) {
+    [style*="grid-template-columns"] { grid-template-columns: 1fr !important; gap: 26px !important; }
+    [style*="max-width: 1200px"] { padding-left: 22px !important; padding-right: 22px !important; }
+    [style*="font-size: 58px"] { font-size: 34px !important; line-height: 1.12 !important; }
+    [style*="font-size: 46px"] { font-size: 30px !important; }
+    [style*="font-size: 44px"] { font-size: 30px !important; }
+    [style*="font-size: 40px"] { font-size: 28px !important; }
+    [style*="font-size: 38px"] { font-size: 27px !important; }
+    [style*="font-size: 36px"] { font-size: 26px !important; }
+    nav a[href="#features"], nav a[href="#privacy"], nav a[href="#pricing"], nav a[href="#faq"] { display: none !important; }
+    img { max-width: 100% !important; height: auto !important; }
+  }
 </style></head>
 <body>
 <div id="dc-root"><div class="sc-host" data-sc-name="Vivascri Landing"><div style="--ink: #26221E; --ink-2: #3A342D; --muted: #6E655A; --faint: #A99F8E; --cream: #F6EFE1; --page: #EBDFCB; --line: rgba(38,34,30,.14); --line-2: rgba(38,34,30,.24); --accent: #3E7A4C; --accent-deep: #2F5E3A; --accent-soft: #E3EDDD; background: var(--page,#EBDFCB); color: var(--ink); font-family: &quot;IBM Plex Sans&quot;, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden;">
@@ -84,7 +99,7 @@
         <a href="#privacy" style="text-decoration: none; color: var(--ink-2); font-size: 14.5px;">Privacy</a>
         <a href="#pricing" style="text-decoration: none; color: var(--ink-2); font-size: 14.5px;">Pricing</a>
         <a href="#faq" style="text-decoration: none; color: var(--ink-2); font-size: 14.5px;">FAQ</a>
-        <a href="https://github.com/karamilabs/vivascri-releases/releases/download/v1.0.0/Vivascri-Lite-1.0.0.exe" class="scp0" style="display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; flex: 0 0 auto; background: var(--ink); color: var(--cream); text-decoration: none; font-size: 14px; font-weight: 500; padding: 9px 16px; border-radius: 8px;">
+        <a href="https://github.com/karamilabs/vivascri-releases/releases/download/v1.1.0/Vivascri-Lite-1.1.0.exe" class="scp0" style="display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; flex: 0 0 auto; background: var(--ink); color: var(--cream); text-decoration: none; font-size: 14px; font-weight: 500; padding: 9px 16px; border-radius: 8px;">
           <svg viewBox="0 0 24 24" style="width: 14px; height: 14px;"><path d="M12 3v11m0 0l-4-4m4 4l4-4M5 20h14" style="fill: none; stroke: currentcolor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"></path></svg>
           <span>Download for Windows</span>
         </a>
@@ -99,9 +114,9 @@
         <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent,#3E7A4C);"></span>Local-first · Windows · Free, no account
       </div>
       <h1 style="margin: 0px; font-family: Newsreader, serif; font-weight: 500; font-size: 58px; line-height: 1.06; letter-spacing: -0.02em;">The writing app that <span style="color: var(--accent-deep,#2F5E3A);">proves every citation</span>, and never sees your work.</h1>
-      <p style="margin: 26px 0px 0px; font-size: 18px; line-height: 1.6; color: var(--ink-2); max-width: 520px;">A real word processor that drafts with AI on your own machine. Every in-text citation is pinned to an exact page in your own PDF library — fully local, offline, and private.</p>
+      <p style="margin: 26px 0px 0px; font-size: 18px; line-height: 1.6; color: var(--ink-2); max-width: 520px;">A real word processor that drafts with AI on your own machine. Every in-text citation is pinned to an exact page in your own PDF library. Fully local, offline, and private.</p>
       <div style="display: flex; align-items: center; gap: 16px; margin-top: 34px; flex-wrap: wrap;">
-        <a href="https://github.com/karamilabs/vivascri-releases/releases/download/v1.0.0/Vivascri-Lite-1.0.0.exe" class="scp1" style="display: inline-flex; align-items: center; gap: 10px; background: var(--accent,#3E7A4C); color: var(--cream); text-decoration: none; font-size: 16px; font-weight: 600; padding: 15px 24px; border-radius: 10px; box-shadow: rgba(62, 122, 76, 0.6) 0px 12px 24px -12px;">
+        <a href="https://github.com/karamilabs/vivascri-releases/releases/download/v1.1.0/Vivascri-Lite-1.1.0.exe" class="scp1" style="display: inline-flex; align-items: center; gap: 10px; background: var(--accent,#3E7A4C); color: var(--cream); text-decoration: none; font-size: 16px; font-weight: 600; padding: 15px 24px; border-radius: 10px; box-shadow: rgba(62, 122, 76, 0.6) 0px 12px 24px -12px;">
           <svg viewBox="0 0 24 24" style="width: 18px; height: 18px;"><path d="M12 3v11m0 0l-4-4m4 4l4-4M5 20h14" style="fill: none; stroke: currentcolor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"></path></svg>
           <span>Download for Windows</span>
         </a>
@@ -114,48 +129,7 @@
       </div>
     </div>
 
-    <div style="position: relative;">
-      <div style="background: var(--cream); border: 1px solid var(--line); border-radius: 14px; box-shadow: rgba(38, 34, 30, 0.4) 0px 40px 80px -40px, rgba(38, 34, 30, 0.25) 0px 12px 28px -18px; overflow: hidden;">
-        <div style="display: flex; align-items: center; justify-content: space-between; padding: 11px 14px; border-bottom: 1px solid var(--line); background: rgba(38, 34, 30, 0.03);">
-          <div style="display: flex; align-items: center; gap: 9px;">
-            <svg viewBox="0 0 96 96" style="width: 15px; height: 15px; color: var(--ink);"><use href="#nib"></use></svg>
-            <span style="font-size: 12.5px; color: var(--muted);">Governing the commons — draft.vsc</span>
-          </div>
-          <div style="display: flex; align-items: center; gap: 14px; color: var(--faint);">
-            <span style="width: 11px; height: 1.5px; background: currentcolor; display: block;"></span>
-            <span style="width: 10px; height: 10px; border: 1.5px solid; border-radius: 2px; display: block;"></span>
-            <svg viewBox="0 0 24 24" style="width: 11px; height: 11px;"><path d="M5 5l14 14M19 5L5 19" style="fill: none; stroke: currentcolor; stroke-width: 2; stroke-linecap: round;"></path></svg>
-          </div>
-        </div>
-        <div style="display: flex; gap: 8px; padding: 9px 16px; border-bottom: 1px solid var(--line); font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 11px; color: var(--muted);">
-          <span style="border: 1px solid var(--line); border-radius: 5px; padding: 3px 8px;">Body</span>
-          <span style="border: 1px solid var(--line); border-radius: 5px; padding: 3px 7px; font-weight: 600; color: var(--ink);">B</span>
-          <span style="border: 1px solid var(--line); border-radius: 5px; padding: 3px 8px; font-style: italic;">i</span>
-          <span style="border: 1px solid var(--line); border-radius: 5px; padding: 3px 8px;">H2</span>
-          <span style="border: 1px solid var(--line); border-radius: 5px; padding: 3px 8px;">“ ”</span>
-          <span style="margin-left: auto; border: 1px solid var(--accent-soft,#E3EDDD); background: var(--accent-soft,#E3EDDD); color: var(--accent-deep,#2F5E3A); border-radius: 5px; padding: 3px 8px;">Cite ↵</span>
-        </div>
-        <div style="padding: 22px 26px 30px;">
-          <h2 style="margin: 0px 0px 14px; font-family: Newsreader, serif; font-weight: 500; font-size: 22px;">Governing the commons</h2>
-          <p style="margin: 0px 0px 13px; font-size: 14.5px; line-height: 1.78; color: var(--ink-2);">Contrary to the tragedy narrative, communities can sustain shared resources through self-organized rules rather than top-down control <span style="background: var(--accent-soft,#E3EDDD); color: var(--accent-deep,#2F5E3A); border-radius: 4px; padding: 1px 5px; font-weight: 500; white-space: nowrap;">(Ostrom, 1990, p. 90)</span>. These arrangements depend on clearly defined boundaries and</p>
-          <p style="margin: 0px; font-size: 14.5px; line-height: 1.78; color: var(--faint);">graduated sanctions that members themselves design and monitor over time.</p>
-        </div>
-      </div>
-      <div style="position: absolute; right: -22px; bottom: 44px; width: 220px; background: var(--ink); color: var(--cream); border-radius: 12px; padding: 14px; box-shadow: rgba(38, 34, 30, 0.6) 0px 24px 44px -20px;">
-        <div style="display: flex; align-items: center; justify-content: space-between; font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 10px; letter-spacing: 0.08em; color: rgb(184, 175, 159); margin-bottom: 10px;"><span>OSTROM_1990.PDF</span><span>p. 90</span></div>
-        <div style="background: rgb(246, 239, 225); border-radius: 6px; padding: 10px;">
-          <div style="height: 4px; border-radius: 2px; background: rgba(38, 34, 30, 0.18); margin-bottom: 5px; width: 100%;"></div>
-          <div style="height: 4px; border-radius: 2px; background: rgba(38, 34, 30, 0.18); margin-bottom: 5px; width: 88%;"></div>
-          <div style="height: 6px; border-radius: 2px; background: var(--accent,#3E7A4C); margin-bottom: 5px; width: 94%;"></div>
-          <div style="height: 4px; border-radius: 2px; background: rgba(38, 34, 30, 0.18); margin-bottom: 5px; width: 76%;"></div>
-          <div style="height: 4px; border-radius: 2px; background: rgba(38, 34, 30, 0.18); width: 60%;"></div>
-        </div>
-        <div style="display: flex; align-items: center; gap: 7px; margin-top: 11px; font-size: 11.5px; color: rgb(227, 237, 221);">
-          <svg viewBox="0 0 24 24" style="width: 15px; height: 15px;"><circle cx="12" cy="12" r="10" style="fill: var(--accent,#3E7A4C);"></circle><path d="M8 12.5l2.5 2.5L16 9" style="fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"></path></svg>
-          <span style="font-family: &quot;IBM Plex Mono&quot;, monospace; letter-spacing: 0.04em;">Grounded · local</span>
-        </div>
-      </div>
-    </div>
+    <div style="position: relative; border-radius: 14px; box-shadow: rgba(38, 34, 30, 0.4) 0px 40px 80px -40px, rgba(38, 34, 30, 0.25) 0px 12px 28px -18px; overflow: hidden; border: 1px solid var(--line);"><img src="hero-app.png" alt="Vivascri showing a real citation grounded to a page in your own PDF library" style="display: block; width: 100%; height: auto;"></div>
   </header>
 
   <div style="max-width: 1200px; margin: 0px auto; padding: 14px 40px 0px;">
@@ -165,15 +139,15 @@
   <section id="proof" data-screen-label="Proof strip" style="max-width: 1200px; margin: 0px auto; padding: 56px 40px 20px;">
     <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 12px;">
       <span style="font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; color: var(--accent,#3E7A4C);">01</span>
-      <span style="font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);">The proof — a citation receipt</span>
+      <span style="font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);">The proof: a citation receipt</span>
     </div>
     <h2 style="margin: 0px 0px 8px; font-family: Newsreader, serif; font-weight: 500; font-size: 38px; letter-spacing: -0.015em;">Every citation, grounded to a page.</h2>
-    <p style="margin: 0px 0px 34px; font-size: 17px; line-height: 1.6; color: var(--ink-2); max-width: 640px;">Click any citation and Vivascri opens the exact page it came from — a passage in a PDF you already own. No web lookup. No upload. Checked on your machine.</p>
+    <p style="margin: 0px 0px 34px; font-size: 17px; line-height: 1.6; color: var(--ink-2); max-width: 640px;">Click any citation and Vivascri opens the exact page it came from, a passage in a PDF you already own. No web lookup. No upload. Checked on your machine.</p>
 
     <div style="background: var(--cream); border: 1px solid var(--line); border-radius: 16px; padding: 34px; display: grid; grid-template-columns: 1fr auto 1fr; gap: 28px; align-items: center;">
       <div>
         <div style="font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--faint); margin-bottom: 14px;">Your draft</div>
-        <p style="margin: 0px; font-family: Newsreader, serif; font-size: 21px; line-height: 1.62; color: var(--ink);">“Communities can sustain shared resources through self-organized rules rather than top-down control <span style="background: var(--accent-soft,#E3EDDD); color: var(--accent-deep,#2F5E3A); border-radius: 5px; padding: 2px 7px; font-family: &quot;IBM Plex Sans&quot;, sans-serif; font-size: 16px; font-weight: 600; white-space: nowrap;">(Ostrom, 1990, p. 90)</span>.”</p>
+        <p style="margin: 0px; font-family: Newsreader, serif; font-size: 21px; line-height: 1.62; color: var(--ink);">“Desirable difficulties such as spacing and retrieval practice slow apparent learning but improve long-term retention <span style="background: var(--accent-soft,#E3EDDD); color: var(--accent-deep,#2F5E3A); border-radius: 5px; padding: 2px 7px; font-family: &quot;IBM Plex Sans&quot;, sans-serif; font-size: 16px; font-weight: 600; white-space: nowrap;">(Bjork &amp; Bjork, 2011, p. 5)</span>.”</p>
       </div>
       <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; color: var(--accent,#3E7A4C);">
         <svg viewBox="0 0 40 24" style="width: 56px; height: 32px;"><path d="M2 12h30m0 0l-7-6m7 6l-7 6" style="fill: none; stroke: currentcolor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"></path></svg>
@@ -181,24 +155,15 @@
       </div>
       <div style="background: var(--page); border: 1px solid var(--line); border-radius: 12px; overflow: hidden;">
         <div style="display: flex; align-items: center; justify-content: space-between; padding: 9px 13px; border-bottom: 1px solid var(--line); font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.06em; color: var(--muted);">
-          <span style="display: flex; align-items: center; gap: 7px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent,#3E7A4C);"></span>Ostrom_1990.pdf</span>
-          <span>page 90</span>
+          <span style="display: flex; align-items: center; gap: 7px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent,#3E7A4C);"></span>bjork-2011.pdf</span>
+          <span>page 5</span>
         </div>
-        <div style="padding: 16px 16px 18px;">
-          <div style="height: 5px; border-radius: 2px; background: rgba(38, 34, 30, 0.16); margin-bottom: 8px; width: 100%;"></div>
-          <div style="height: 5px; border-radius: 2px; background: rgba(38, 34, 30, 0.16); margin-bottom: 8px; width: 92%;"></div>
-          <div style="position: relative; background: var(--accent-soft,#E3EDDD); border-left: 3px solid var(--accent,#3E7A4C); border-radius: 0px 4px 4px 0px; padding: 8px 10px; margin: 2px 0px 8px;">
-            <div style="height: 5px; border-radius: 2px; background: var(--accent-deep,#2F5E3A); opacity: 0.55; margin-bottom: 6px; width: 96%;"></div>
-            <div style="height: 5px; border-radius: 2px; background: var(--accent-deep,#2F5E3A); opacity: 0.55; width: 70%;"></div>
-          </div>
-          <div style="height: 5px; border-radius: 2px; background: rgba(38, 34, 30, 0.16); margin-bottom: 8px; width: 84%;"></div>
-          <div style="height: 5px; border-radius: 2px; background: rgba(38, 34, 30, 0.16); width: 62%;"></div>
-        </div>
+        <div style="padding: 12px;"><img src="proof-bjork.png" alt="The Bjork and Bjork 2011 PDF, page 5, with the cited passage highlighted" style="display: block; width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--line);"></div>
       </div>
     </div>
     <div style="display: flex; align-items: center; gap: 10px; margin-top: 16px; font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 12px; color: var(--muted);">
       <svg viewBox="0 0 24 24" style="width: 16px; height: 16px;"><circle cx="12" cy="12" r="10" style="fill: var(--accent,#3E7A4C);"></circle><path d="M8 12.5l2.5 2.5L16 9" style="fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"></path></svg>
-      <span>Grounded &amp; verified locally — no web lookup, no upload, no invented sources.</span>
+      <span>Grounded &amp; verified locally. No web lookup, no upload, no invented sources.</span>
     </div>
   </section>
 
@@ -207,12 +172,12 @@
       <div style="background: var(--page); padding: 32px 28px;">
         <svg viewBox="0 0 24 24" style="width: 26px; height: 26px; color: var(--accent,#3E7A4C); margin-bottom: 16px;"><path d="M12 21s-7-4.4-7-10a7 7 0 0114 0c0 5.6-7 10-7 10z" style="fill: none; stroke: currentcolor; stroke-width: 1.6;"></path><circle cx="12" cy="11" r="2.4" style="fill: currentcolor;"></circle></svg>
         <h3 style="margin: 0px 0px 8px; font-family: Newsreader, serif; font-weight: 500; font-size: 23px;">Grounded</h3>
-        <p style="margin: 0px; font-size: 14.5px; line-height: 1.62; color: var(--muted);">Citations are generated from your PDFs and pinned to the page. No hallucinated references — proof you can open.</p>
+        <p style="margin: 0px; font-size: 14.5px; line-height: 1.62; color: var(--muted);">Citations are generated from your PDFs and pinned to the page. No hallucinated references. Proof you can open.</p>
       </div>
       <div style="background: var(--page); padding: 32px 28px;">
         <svg viewBox="0 0 24 24" style="width: 26px; height: 26px; color: var(--accent,#3E7A4C); margin-bottom: 16px;"><rect x="5" y="10" width="14" height="10" rx="2" style="fill: none; stroke: currentcolor; stroke-width: 1.6;"></rect><path d="M8 10V7a4 4 0 018 0v3" style="fill: none; stroke: currentcolor; stroke-width: 1.6;"></path></svg>
         <h3 style="margin: 0px 0px 8px; font-family: Newsreader, serif; font-weight: 500; font-size: 23px;">Private</h3>
-        <p style="margin: 0px; font-size: 14.5px; line-height: 1.62; color: var(--muted);">Local and offline by default. Your drafts and your library never leave your computer — there's no account and nothing to phone home.</p>
+        <p style="margin: 0px; font-size: 14.5px; line-height: 1.62; color: var(--muted);">Local and offline by default. Your drafts and your library never leave your computer. There's no account and nothing to phone home.</p>
       </div>
       <div style="background: var(--page); padding: 32px 28px;">
         <svg viewBox="0 0 24 24" style="width: 26px; height: 26px; color: var(--accent,#3E7A4C); margin-bottom: 16px;"><path d="M4 5h16v14H4z" style="fill: none; stroke: currentcolor; stroke-width: 1.6;"></path><path d="M8 9h8M8 13h5" style="fill: none; stroke: currentcolor; stroke-width: 1.6; stroke-linecap: round;"></path></svg>
@@ -231,7 +196,7 @@
       <div>
         <div style="font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 12px; color: var(--accent,#3E7A4C); margin-bottom: 14px;">01</div>
         <h3 style="margin: 0px 0px 8px; font-family: Newsreader, serif; font-weight: 500; font-size: 20px;">Add your library</h3>
-        <p style="margin: 0px; font-size: 14px; line-height: 1.6; color: var(--muted);">Drop in the PDFs you already own — papers, books, notes. They stay on your disk.</p>
+        <p style="margin: 0px; font-size: 14px; line-height: 1.6; color: var(--muted);">Drop in the PDFs you already own: papers, books, notes. They stay on your disk.</p>
       </div>
       <div>
         <div style="font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 12px; color: var(--accent,#3E7A4C); margin-bottom: 14px;">02</div>
@@ -263,11 +228,11 @@
       </div>
       <div style="background: var(--cream); border: 1px solid var(--line); border-radius: 12px; padding: 26px;">
         <h3 style="margin: 0px 0px 8px; font-family: Newsreader, serif; font-weight: 500; font-size: 20px;">Grounded citations</h3>
-        <p style="margin: 0px; font-size: 14px; line-height: 1.6; color: var(--muted);">Pinned to the exact page in your own PDFs — in APA, MLA, Chicago, Harvard, or IEEE — so every reference is verifiable at a click.</p>
+        <p style="margin: 0px; font-size: 14px; line-height: 1.6; color: var(--muted);">Pinned to the exact page in your own PDFs, in APA, MLA, Chicago, or Harvard, so every reference is verifiable at a click.</p>
       </div>
       <div style="background: var(--cream); border: 1px solid var(--line); border-radius: 12px; padding: 26px;">
         <h3 style="margin: 0px 0px 8px; font-family: Newsreader, serif; font-weight: 500; font-size: 20px;">Local AI drafting</h3>
-        <p style="margin: 0px; font-size: 14px; line-height: 1.6; color: var(--muted);">A model runs on your machine to help draft and revise — no data sent anywhere.</p>
+        <p style="margin: 0px; font-size: 14px; line-height: 1.6; color: var(--muted);">A model runs on your machine to help draft and revise. No data sent anywhere.</p>
       </div>
       <div style="background: var(--cream); border: 1px solid var(--line); border-radius: 12px; padding: 26px;">
         <h3 style="margin: 0px 0px 8px; font-family: Newsreader, serif; font-weight: 500; font-size: 20px;">Offline &amp; private</h3>
@@ -275,12 +240,12 @@
       </div>
       <div style="background: var(--cream); border: 1px solid var(--line); border-radius: 12px; padding: 26px;">
         <h3 style="margin: 0px 0px 8px; font-family: Newsreader, serif; font-weight: 500; font-size: 20px;">Your own library</h3>
-        <p style="margin: 0px; font-size: 14px; line-height: 1.6; color: var(--muted);">Build your library your way — drop in PDFs you own, or paste a DOI, arXiv link, or URL and Vivascri pulls a clean open-access copy. Every citation is grounded in that local library, pinned to the page.</p>
+        <p style="margin: 0px; font-size: 14px; line-height: 1.6; color: var(--muted);">Build your library your way: drop in PDFs you own, or paste a DOI, arXiv link, or URL and Vivascri pulls a clean open-access copy. Every citation is grounded in that local library, pinned to the page.</p>
       </div>
       <div style="background: var(--cream); border: 1px dashed var(--line-2); border-radius: 12px; padding: 26px;">
         <div style="display: inline-block; font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-deep,#2F5E3A); background: var(--accent-soft,#E3EDDD); border-radius: 4px; padding: 3px 7px; margin-bottom: 12px;">Coming soon · optional</div>
         <h3 style="margin: 0px 0px 8px; font-family: Newsreader, serif; font-weight: 500; font-size: 20px;">Cloud power, when you want it</h3>
-        <p style="margin: 0px; font-size: 14px; line-height: 1.6; color: var(--muted);">Hosted inference, sync, and collaboration as opt-in online extras — layered on the free offline core.</p>
+        <p style="margin: 0px; font-size: 14px; line-height: 1.6; color: var(--muted);">Sharper neural retrieval and priority support as optional upgrades, layered on the free offline core.</p>
       </div>
     </div>
   </section>
@@ -294,7 +259,7 @@
       <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: start;">
         <div>
           <h2 style="margin: 0px 0px 18px; font-family: Newsreader, serif; font-weight: 500; font-size: 40px; line-height: 1.12; letter-spacing: -0.015em;">This site practices the privacy it preaches.</h2>
-          <p style="margin: 0px; font-size: 17px; line-height: 1.62; color: rgb(216, 207, 190); max-width: 480px;">Vivascri is built local-first. The app you download needs no account and sends nothing. The only things that ever go online are the optional cloud tiers — and only for the people who choose to turn them on.</p>
+          <p style="margin: 0px; font-size: 17px; line-height: 1.62; color: rgb(216, 207, 190); max-width: 480px;">Vivascri is built local-first. The app you download needs no account and sends nothing. The only network calls are ones you start yourself, like fetching a model or adding a paper by link.</p>
           <div style="display: inline-block; margin-top: 26px; font-family: Newsreader, serif; font-style: italic; font-size: 20px; color: var(--cream); border-top: 1px solid rgba(246, 239, 225, 0.2); padding-top: 18px;">“Free, local, and offline forever. Cloud power when you want it.”</div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 2px; background: rgba(246, 239, 225, 0.1); border-radius: 12px; overflow: hidden;">
@@ -327,7 +292,7 @@
     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;">
       <div style="border-top: 2px solid var(--accent,#3E7A4C); padding-top: 18px;">
         <h3 style="margin: 0px 0px 8px; font-family: Newsreader, serif; font-weight: 500; font-size: 22px;">Students</h3>
-        <p style="margin: 0px; font-size: 14.5px; line-height: 1.6; color: var(--muted);">Write essays and theses with citations you can defend — and keep your drafts to yourself.</p>
+        <p style="margin: 0px; font-size: 14.5px; line-height: 1.6; color: var(--muted);">Write essays and theses with citations you can defend, and keep your drafts to yourself.</p>
       </div>
       <div style="border-top: 2px solid var(--accent,#3E7A4C); padding-top: 18px;">
         <h3 style="margin: 0px 0px 8px; font-family: Newsreader, serif; font-weight: 500; font-size: 22px;">Researchers</h3>
@@ -347,11 +312,11 @@
           <span style="font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; color: var(--accent,#3E7A4C);">06</span>
           <span style="font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);">Pricing</span>
         </div>
-        <h2 style="margin: 0px; font-family: Newsreader, serif; font-weight: 500; font-size: 36px; letter-spacing: -0.015em;">Free to write. Pay only for the cloud.</h2>
+        <h2 style="margin: 0px; font-family: Newsreader, serif; font-weight: 500; font-size: 36px; letter-spacing: -0.015em;">Free to write. Pay for sharper sources.</h2>
       </div>
       <div style="display: inline-flex; background: var(--cream); border: 1px solid var(--line); border-radius: 999px; padding: 4px;">
         <button style="border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; font-family: &quot;IBM Plex Sans&quot;, sans-serif; font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: 999px; background: transparent; color: rgb(110, 101, 90);">Monthly</button>
-        <button style="border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; font-family: &quot;IBM Plex Sans&quot;, sans-serif; font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: 999px; background: rgb(62, 122, 76); color: rgb(246, 239, 225); display: inline-flex; align-items: center; gap: 7px;">Annual <span style="font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 10px; opacity: 0.85;">−25%</span></button>
+        <button style="border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; font-family: &quot;IBM Plex Sans&quot;, sans-serif; font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: 999px; background: rgb(62, 122, 76); color: rgb(246, 239, 225); display: inline-flex; align-items: center; gap: 7px;">Annual <span style="font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 10px; opacity: 0.85;">−20%</span></button>
       </div>
     </div>
 
@@ -362,13 +327,13 @@
           <span style="font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-deep,#2F5E3A); background: var(--accent-soft,#E3EDDD); padding: 4px 8px; border-radius: 5px;">Start here</span>
         </div>
         <div style="display: flex; align-items: baseline; gap: 3px; margin: 16px 0px 4px;"><span style="font-family: Newsreader, serif; font-size: 44px; font-weight: 500;">$0</span></div>
-        <div style="font-size: 13px; color: var(--muted); margin-bottom: 18px;">Local, offline, no account — forever.</div>
+        <div style="font-size: 13px; color: var(--muted); margin-bottom: 18px;">Local, offline, no account. Forever.</div>
         <div style="display: flex; flex-direction: column; gap: 9px; font-size: 13.5px; color: var(--ink-2); margin-bottom: 22px;">
           <span style="display: flex; gap: 9px;"><span style="color: var(--accent,#3E7A4C);">✓</span> Full word processor &amp; export</span>
           <span style="display: flex; gap: 9px;"><span style="color: var(--accent,#3E7A4C);">✓</span> Grounded citations from your PDFs</span>
           <span style="display: flex; gap: 9px;"><span style="color: var(--accent,#3E7A4C);">✓</span> Local AI drafting</span>
         </div>
-        <a href="https://github.com/karamilabs/vivascri-releases/releases/download/v1.0.0/Vivascri-Lite-1.0.0.exe" class="scp1" style="margin-top: auto; text-align: center; background: var(--accent,#3E7A4C); color: var(--cream); text-decoration: none; font-size: 14.5px; font-weight: 600; padding: 12px; border-radius: 9px;">Download for Windows</a>
+        <a href="https://github.com/karamilabs/vivascri-releases/releases/download/v1.1.0/Vivascri-Lite-1.1.0.exe" class="scp1" style="margin-top: auto; text-align: center; background: var(--accent,#3E7A4C); color: var(--cream); text-decoration: none; font-size: 14.5px; font-weight: 600; padding: 12px; border-radius: 9px;">Download for Windows</a>
       </div>
 
       <div style="background: var(--page); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; position: relative;">
@@ -376,15 +341,15 @@
         <div style="display: flex; align-items: center; justify-content: space-between;">
           <h3 style="margin: 0px; font-family: Newsreader, serif; font-weight: 600; font-size: 24px;">Scholar</h3>
         </div>
-        <div style="display: flex; align-items: baseline; gap: 4px; margin: 16px 0px 4px;"><span style="font-family: Newsreader, serif; font-size: 44px; font-weight: 500;">$</span><span style="font-family: Newsreader, serif; font-size: 44px; font-weight: 500;">6</span><span style="font-size: 14px; color: var(--muted);">/mo</span></div>
+        <div style="display: flex; align-items: baseline; gap: 4px; margin: 16px 0px 4px;"><span style="font-family: Newsreader, serif; font-size: 44px; font-weight: 500;">$</span><span style="font-family: Newsreader, serif; font-size: 44px; font-weight: 500;">8</span><span style="font-size: 14px; color: var(--muted);">/mo</span></div>
         <div style="font-size: 13px; color: var(--muted); margin-bottom: 8px;">per month, billed annually</div>
-        <div style="display: inline-block; font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 11px; color: var(--accent-deep,#2F5E3A); background: var(--accent-soft,#E3EDDD); border-radius: 5px; padding: 4px 8px; margin-bottom: 18px; align-self: flex-start;">$4/mo for students</div>
+        <div style="display: inline-block; font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 11px; color: var(--accent-deep,#2F5E3A); background: var(--accent-soft,#E3EDDD); border-radius: 5px; padding: 4px 8px; margin-bottom: 18px; align-self: flex-start;">$5/mo for students</div>
         <div style="display: flex; flex-direction: column; gap: 9px; font-size: 13.5px; color: var(--ink-2); margin-bottom: 22px;">
           <span style="display: flex; gap: 9px;"><span style="color: var(--accent,#3E7A4C);">✓</span> Everything in Free</span>
-          <span style="display: flex; gap: 9px;"><span style="color: var(--accent,#3E7A4C);">✓</span> Hosted inference (no GPU needed)</span>
-          <span style="display: flex; gap: 9px;"><span style="color: var(--accent,#3E7A4C);">✓</span> Sync across your devices</span>
+          <span style="display: flex; gap: 9px;"><span style="color: var(--accent,#3E7A4C);">✓</span> Neural re-ranking for sharper, more relevant sources</span>
+          <span style="display: flex; gap: 9px;"><span style="color: var(--accent,#3E7A4C);">✓</span> Query expansion + iterative grounding for hard questions</span>
         </div>
-        <a href="#pricing" class="scp0" style="margin-top: auto; text-align: center; background: var(--ink); color: var(--cream); text-decoration: none; font-size: 14.5px; font-weight: 600; padding: 12px; border-radius: 9px;">Choose Scholar</a>
+        <span class="scp0" style="margin-top: auto; text-align: center; background: var(--ink); color: var(--cream); text-decoration: none; font-size: 14.5px; font-weight: 600; padding: 12px; border-radius: 9px; opacity: 0.55; pointer-events: none;">Coming soon</span>
       </div>
 
       <div style="background: var(--page); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: flex; flex-direction: column;">
@@ -394,17 +359,17 @@
         <div style="display: inline-block; font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 11px; color: var(--ink-2); background: rgba(38, 34, 30, 0.06); border-radius: 5px; padding: 4px 8px; margin-bottom: 18px; align-self: flex-start;">$14/seat for teams</div>
         <div style="display: flex; flex-direction: column; gap: 9px; font-size: 13.5px; color: var(--ink-2); margin-bottom: 22px;">
           <span style="display: flex; gap: 9px;"><span style="color: var(--accent,#3E7A4C);">✓</span> Everything in Scholar</span>
-          <span style="display: flex; gap: 9px;"><span style="color: var(--accent,#3E7A4C);">✓</span> Collaboration &amp; shared projects</span>
-          <span style="display: flex; gap: 9px;"><span style="color: var(--accent,#3E7A4C);">✓</span> Priority hosted models</span>
+          <span style="display: flex; gap: 9px;"><span style="color: var(--accent,#3E7A4C);">✓</span> GPU-class retrieval with a larger embedding model</span>
+          <span style="display: flex; gap: 9px;"><span style="color: var(--accent,#3E7A4C);">✓</span> Priority updates and support</span>
         </div>
-        <a href="#pricing" class="scp2" style="margin-top: auto; text-align: center; background: none; border: 1px solid var(--line-2); color: var(--ink); text-decoration: none; font-size: 14.5px; font-weight: 600; padding: 12px; border-radius: 9px;">Choose Pro</a>
+        <span class="scp2" style="margin-top: auto; text-align: center; background: none; border: 1px solid var(--line-2); color: var(--ink); text-decoration: none; font-size: 14.5px; font-weight: 600; padding: 12px; border-radius: 9px; opacity: 0.55; pointer-events: none;">Coming soon</span>
       </div>
     </div>
     <div style="display: flex; align-items: center; gap: 14px; margin-top: 18px; font-size: 13px; color: var(--muted); flex-wrap: wrap;">
-      <span style="font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint);">Indicative pricing — not final</span>
+      <span style="font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint);">Indicative pricing · not final</span>
       <span style="width: 1px; height: 13px; background: var(--line-2);"></span>
-      <span>Paid tiers unlock optional online extras. The core app is free, local, and offline.</span>
-      <a href="#pricing" style="margin-left: auto; color: var(--accent-deep,#2F5E3A); text-decoration: none; font-weight: 600;">See full pricing →</a>
+      <span>Paid tiers sharpen retrieval. The core app is free, local, and offline.</span>
+      
     </div>
   </section>
 
@@ -425,7 +390,7 @@
               <span style="flex: 0 0 auto; font-family: &quot;IBM Plex Sans&quot;, sans-serif; font-size: 24px; color: var(--accent,#3E7A4C); width: 24px; text-align: center;">–</span>
             </button>
             
-              <div style="padding: 0px 2px 22px; max-width: 660px; font-size: 15px; line-height: 1.66; color: var(--muted);">Yes. The app is free, local, and offline, with no account required. The paid tiers add optional cloud services — you never need them to write and cite.</div>
+              <div style="padding: 0px 2px 22px; max-width: 660px; font-size: 15px; line-height: 1.66; color: var(--muted);">Yes. The app is free, local, and offline, with no account required. The paid tiers add stronger retrieval models that also run on your machine, and you never need them to write and cite.</div>
             
           </div>
         
@@ -434,6 +399,8 @@
               <span>Does my work leave my computer?</span>
               <span style="flex: 0 0 auto; font-family: &quot;IBM Plex Sans&quot;, sans-serif; font-size: 24px; color: var(--accent,#3E7A4C); width: 24px; text-align: center;">+</span>
             </button>
+              <div style="padding: 0px 2px 22px; max-width: 660px; font-size: 15px; line-height: 1.66; color: var(--muted);">No. Writing, your PDF library, search, citations, and AI drafting all run on your machine. The only network calls are ones you start yourself: downloading an AI model, or adding a paper by DOI or link, which fetches a free open-access copy. If you connect a cloud AI (Claude or GPT) in Settings, your text goes to that provider; that is off by default and clearly marked. No account, no telemetry, nothing else uploaded.</div>
+            
             
           </div>
         
@@ -442,6 +409,8 @@
               <span>Do I need an internet connection?</span>
               <span style="flex: 0 0 auto; font-family: &quot;IBM Plex Sans&quot;, sans-serif; font-size: 24px; color: var(--accent,#3E7A4C); width: 24px; text-align: center;">+</span>
             </button>
+              <div style="padding: 0px 2px 22px; max-width: 660px; font-size: 15px; line-height: 1.66; color: var(--muted);">Twice. Once to download the app, and once on first launch, when it fetches a small AI model (about 1 GB, one time). After that, writing, citing, and AI drafting work fully offline. Adding a paper by DOI or link needs a connection; dropping in PDFs you already have does not.</div>
+            
             
           </div>
         
@@ -450,6 +419,8 @@
               <span>Which operating systems are supported?</span>
               <span style="flex: 0 0 auto; font-family: &quot;IBM Plex Sans&quot;, sans-serif; font-size: 24px; color: var(--accent,#3E7A4C); width: 24px; text-align: center;">+</span>
             </button>
+              <div style="padding: 0px 2px 22px; max-width: 660px; font-size: 15px; line-height: 1.66; color: var(--muted);">Windows 10 and 11, 64-bit. Mac and Linux are not available yet.</div>
+            
             
           </div>
         
@@ -458,6 +429,8 @@
               <span>Is this a Zotero replacement?</span>
               <span style="flex: 0 0 auto; font-family: &quot;IBM Plex Sans&quot;, sans-serif; font-size: 24px; color: var(--accent,#3E7A4C); width: 24px; text-align: center;">+</span>
             </button>
+              <div style="padding: 0px 2px 22px; max-width: 660px; font-size: 15px; line-height: 1.66; color: var(--muted);">Different tools. Zotero manages a reference library; Vivascri is where you write. It keeps its own local library of the PDFs you cite, pulls clean open-access copies from a DOI or arXiv link, imports .bib and .ris files, and formats references in APA, MLA, Chicago, or Harvard. Already on Zotero? Export a .bib and import it here. Just need to write a properly cited paper? Vivascri alone covers it.</div>
+            
             
           </div>
         
@@ -466,7 +439,16 @@
               <span>What does “grounded” mean?</span>
               <span style="flex: 0 0 auto; font-family: &quot;IBM Plex Sans&quot;, sans-serif; font-size: 24px; color: var(--accent,#3E7A4C); width: 24px; text-align: center;">+</span>
             </button>
+              <div style="padding: 0px 2px 22px; max-width: 660px; font-size: 15px; line-height: 1.66; color: var(--muted);">Every citation is tied to a real passage in a PDF you own. Click one and Vivascri opens that exact page and highlights where it came from. The AI can only cite sources retrieved from your own library, and the export gate refuses any citation that is missing its real source data, and names it. A made-up citation never lands in your paper silently.</div>
             
+            
+          </div>
+          <div style="border-top: 1px solid var(--line);">
+            <button style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 18px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; text-align: left; padding: 20px 2px; font-family: Newsreader, serif; font-weight: 500; font-size: 20px; color: var(--ink);">
+              <span>How do I update, and what version do I have?</span>
+              <span style="flex: 0 0 auto; font-family: &quot;IBM Plex Sans&quot;, sans-serif; font-size: 24px; color: var(--accent,#3E7A4C); width: 24px; text-align: center;">+</span>
+            </button>
+              <div style="padding: 0px 2px 22px; max-width: 660px; font-size: 15px; line-height: 1.66; color: var(--muted);">Download the new Vivascri.exe from this page and replace the old one. Your library, documents, and settings are kept; they live in your Windows user folder, not next to the exe. The version is shown in the app under Settings and in the file's Properties. The current release is 1.1.0. The app never checks for updates on its own, so this page is the place to look.</div>
           </div>
         
       </div>
@@ -483,15 +465,15 @@
         <circle cx="48" cy="60" r="3.6" style="fill: var(--ink,#26221E);"></circle>
       </svg>
       <h2 style="margin: 0px auto 16px; font-family: Newsreader, serif; font-weight: 500; font-size: 46px; line-height: 1.1; letter-spacing: -0.02em; max-width: 660px;">Grounded, private writing. On your machine.</h2>
-      <p style="margin: 0px auto 34px; font-size: 17px; color: rgb(216, 207, 190); max-width: 520px;">Download the free app for Windows. No account, nothing uploaded — start writing offline in a minute.</p>
+      <p style="margin: 0px auto 34px; font-size: 17px; color: rgb(216, 207, 190); max-width: 520px;">Download the free app for Windows. No account, nothing uploaded. Start writing offline in a minute.</p>
       <div style="display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap;">
-        <a href="https://github.com/karamilabs/vivascri-releases/releases/download/v1.0.0/Vivascri-Lite-1.0.0.exe" class="scp1" style="display: inline-flex; align-items: center; gap: 10px; background: var(--accent,#3E7A4C); color: var(--cream); text-decoration: none; font-size: 16px; font-weight: 600; padding: 16px 26px; border-radius: 10px;">
+        <a href="https://github.com/karamilabs/vivascri-releases/releases/download/v1.1.0/Vivascri-Lite-1.1.0.exe" class="scp1" style="display: inline-flex; align-items: center; gap: 10px; background: var(--accent,#3E7A4C); color: var(--cream); text-decoration: none; font-size: 16px; font-weight: 600; padding: 16px 26px; border-radius: 10px;">
           <svg viewBox="0 0 24 24" style="width: 18px; height: 18px;"><path d="M12 3v11m0 0l-4-4m4 4l4-4M5 20h14" style="fill: none; stroke: currentcolor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"></path></svg>
           <span>Download for Windows</span>
         </a>
         <span style="font-size: 14px; color: rgb(184, 175, 159);"><b style="color: var(--cream); font-weight: 600;">Free.</b> No account. Windows 10 &amp; 11. ~125 MB.</span>
       </div>
-      <p style="margin: 18px auto 0px; font-size: 13px; color: rgb(184, 175, 159); max-width: 520px;">Early build, not yet code-signed: if Windows SmartScreen appears, choose "More info", then "Run anyway".</p>
+      <p style="margin: 18px auto 0px; font-size: 13px; color: rgb(184, 175, 159); max-width: 560px; line-height: 1.6;">Version 1.1.0 for Windows 10/11 (64-bit), about 130 MB, portable: no installer. Not yet code-signed, so if Windows SmartScreen appears choose "More info", then "Run anyway". A black console window opens with the app; closing that window quits. On first launch it fetches a small AI model (about 1 GB, once). Writing and keyword search work even before that finishes.</p>
     </div>
   </section>
 
@@ -508,7 +490,7 @@
           </svg>
           <span style="font-family: Newsreader, serif; font-weight: 500; font-size: 20px;">Vivascri</span>
         </div>
-        <p style="margin: 0px 0px 8px; font-size: 13.5px; line-height: 1.6; color: var(--muted); max-width: 240px;">Living writing — grounded citations, on your own machine. <span style="color: var(--ink-2);">vivascri.com</span></p>
+        <p style="margin: 0px 0px 8px; font-size: 13.5px; line-height: 1.6; color: var(--muted); max-width: 240px;">Living writing: grounded citations, on your own machine. <span style="color: var(--ink-2);">vivascri.com</span></p>
       </div>
       <div>
         <div style="font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--faint); margin-bottom: 14px;">Product</div>
@@ -523,22 +505,21 @@
         <div style="font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--faint); margin-bottom: 14px;">Company</div>
         <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
           <a href="#privacy" style="text-decoration: none; color: var(--ink-2);">Privacy</a>
-          <a href="#" style="text-decoration: none; color: var(--ink-2);">Privacy policy</a>
-          <a href="#" style="text-decoration: none; color: var(--ink-2);">About</a>
+          <a href="./privacy.html" style="text-decoration: none; color: var(--ink-2);">Privacy policy</a>
+          <a href="./terms.html" style="text-decoration: none; color: var(--ink-2);">Terms of use</a>
+          <a href="./refunds.html" style="text-decoration: none; color: var(--ink-2);">Refunds</a>
+          <a href="mailto:support@vivascri.com" style="text-decoration: none; color: var(--ink-2);">support@vivascri.com</a>
         </div>
       </div>
       <div>
         <div style="font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--faint); margin-bottom: 14px;">Platform</div>
         <p style="margin: 0px 0px 14px; font-size: 13.5px; line-height: 1.6; color: var(--muted);"><b style="color: var(--ink); font-weight: 600;">Windows only for now.</b> macOS and Linux aren't available yet.</p>
-        <div style="display: flex; gap: 8px;">
-          <input type="email" placeholder="Email for Mac/Linux updates" style="flex: 1 1 0%; min-width: 0px; background: var(--cream); border: 1px solid var(--line-2); border-radius: 8px; padding: 9px 11px; font-family: &quot;IBM Plex Sans&quot;, sans-serif; font-size: 13px; color: var(--ink);">
-          <button style="flex: 0 0 auto; background: var(--ink); color: var(--cream); border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; border-radius: 8px; padding: 9px 14px; font-size: 13px; font-weight: 600; cursor: pointer;">Notify me</button>
-        </div>
+        <a href="mailto:support@vivascri.com?subject=Vivascri%20for%20Mac%20or%20Linux" style="display: inline-block; background: var(--ink); color: var(--cream); text-decoration: none; border-radius: 8px; padding: 9px 14px; font-size: 13px; font-weight: 600;">Email us if you want Mac or Linux</a>
       </div>
     </div>
     <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 20px; font-family: &quot;IBM Plex Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.08em; color: var(--faint); flex-wrap: wrap;">
       <span>© 2026 Vivascri</span>
-      <span>Privacy-respecting analytics only, or none.</span>
+      <span>No analytics, no cookies.</span>
       <span>VEE-va-scree</span>
     </div>
   </footer></div></div></div>
@@ -580,7 +561,7 @@
     if (toggle) {
       toggle.style.display = "none";
       var note = document.createElement("div");
-      note.textContent = "Prices are billed annually (about 25% off monthly). Indicative \u2014 not final.";
+      note.textContent = "Prices are billed annually (about 20% off monthly). Indicative, not final.";
       note.style.cssText = "font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.04em;color:var(--muted);margin-top:6px;";
       toggle.parentNode.insertBefore(note, toggle.nextSibling);
     }

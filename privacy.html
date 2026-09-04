@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./fonts.css">
-<title>Privacy — Vivascri</title>
+<title>Privacy · Vivascri</title>
 <meta name="description" content="Vivascri's privacy policy. The app is local and offline; your work never leaves your computer.">
 <style>
   :root{
@@ -51,29 +50,37 @@
     <li><strong>No telemetry.</strong> The app does not phone home, track usage, or send analytics.</li>
     <li><strong>Optional web fetch, only when you ask.</strong> If you paste a DOI, arXiv link, or URL to
       add a paper, the app requests that one open-access source (and, for citation lookups you initiate,
-      the public metadata for it). Nothing about your document is sent — only the identifier you typed.</li>
-    <li><strong>Optional cloud tiers (coming soon).</strong> Paid features like hosted inference, sync,
-      and collaboration are online services and would need an account and a connection. They are opt-in,
-      clearly labelled, and off unless you choose them. The free app never uses them.</li>
+      the public metadata for it). Nothing about your document is sent; only the identifier you typed.</li>
+    <li><strong>One-time model download.</strong> The local AI models are not inside the installer. On first
+      launch (or when you pick a model in Settings) the app downloads them from Ollama's public model registry
+      over the internet. Nothing about you or your documents is sent; it is a plain file download.</li>
+    <li><strong>Optional cloud AI, only if you connect one.</strong> In Settings you can point drafting at
+      Claude or GPT with your own API key. If you do, the text you ask it to work on goes to that provider under
+      their terms. This is off by default and the app shows a clear indicator while it is on.</li>
+    <li><strong>Paid tiers are still local.</strong> Scholar and Pro add stronger retrieval models that run on
+      your machine. They involve no account, no sync, and no server of ours.</li>
   </ul>
 
   <h2>This website</h2>
   <ul>
-    <li><strong>Privacy-respecting analytics, or none.</strong> If this site uses analytics at all, it is
-      a cookieless, no-personal-data measure of page views. No Google Analytics, no ad trackers.</li>
+    <li><strong>No analytics, no cookies.</strong> This site runs no analytics script and sets no cookies. It
+      is hosted on GitHub Pages, whose servers keep ordinary web-server request logs, as any host does.</li>
     <li><strong>Fonts are self-hosted.</strong> The site serves its own fonts, so visiting it does not
       send your IP to a third-party font CDN.</li>
-    <li><strong>Email, only if you give it.</strong> If you enter your email to be notified about
-      macOS/Linux or updates, it is used only to send those updates. Nothing else.</li>
+    <li><strong>Email, only if you write to us.</strong> Mail to support@vivascri.com is forwarded to a
+      Karami Labs inbox and used only to answer you. We keep no mailing list.</li>
+    <li><strong>Purchases.</strong> Paid tiers are sold through Lemon Squeezy, our merchant of record. They
+      collect what a purchase needs (email, payment details, billing country for tax) under
+      <a href="https://www.lemonsqueezy.com/privacy">their privacy policy</a>. We see your email and order, never
+      your card number.</li>
   </ul>
 
   <h2>Contact</h2>
-  <p>Questions about privacy? Email <a href="mailto:deviman26@gmail.com">deviman26@gmail.com</a>.</p>
+  <p>Questions about privacy? Email <a href="mailto:support@vivascri.com">support@vivascri.com</a>.</p>
+  <p>See also the <a href="./terms.html">terms of use</a> and the <a href="./refunds.html">refund policy</a>.
+  Last updated 4 September 2026.</p>
 
-  <div class="note">Draft policy — review and adjust the analytics/email specifics to match exactly what
-  you switch on at launch before publishing.</div>
-
-  <div class="meta">Vivascri · vivascri.com · Windows only, for now.</div>
+  <div class="meta">Vivascri · vivascri.com · Karami Labs, Ontario, Canada · Windows only, for now.</div>
 </div>
 </body>
 </html>
